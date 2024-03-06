@@ -1,4 +1,5 @@
-import calcu_2 as operaciones
+import functions as operaciones
+import os
 
 operacionesBasicas = {
    "suma" : operaciones.suma,
@@ -17,12 +18,14 @@ operacionesTrigonometricas = {
 
 def calculadora():
    while True:
+      operaciones.calculadora()
       resultado = 0
       opcion = input("Ingrese la operacion que desee hacer (escribir salir para salir): ").lower()
       if opcion == "salir":
          print("Bye Bye")
          break
       if opcion not in operacionesTrigonometricas and opcion not in operacionesBasicas:
+         
          print ("Opcion no reconocida")
          continue
       try:
@@ -30,6 +33,10 @@ def calculadora():
             numero1 = float(input("Ingrese su primer valor: "))
             if opcion == "raiz":
                resultado = operacionesBasicas["raiz"](numero1)
+            elif opcion == "cuadratica":
+               numero2 = float(input("Ingrese su segundo valor: "))
+               numero3 = float(input("Ingrese su tercer valor: "))
+               resultado = operacionesBasicas["cuadratica"](numero1, numero2, numero3) 
             else:    
                numero2 = float(input("Ingrese su primer valor: "))
                resultado = operacionesBasicas[opcion](numero1, numero2)
@@ -42,5 +49,4 @@ def calculadora():
       print (f"Su resultado es {resultado}")
 1.5708
 
-# calculadora()
-print(operaciones.cuadratica(-1,1/2,5))
+calculadora()
