@@ -41,12 +41,13 @@ def integralSimple():
 
 def calculadora ():
     print("""
+
     ////////////////////////////////////////////////
-    //  Suma                    Seno              //
-    //  Resta                   Coseno            //
-    //  Multiplicacion          Tangente          //
+    //  Suma                  Seno                //
+    //  Resta                 Coseno              //
+    //  Multiplicacion        Tangente            //
     //  División                                  //
-    //  Cuadratica                                //
+    //  Cuadratica                                //        
     //  Salir                                     //
      //////////////////////////////////////////////""")
     
